@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".effect.TelescopeActivity" />
         <activity android:name=".effect.DynamicsBackgroundActivity" />
+        <activity android:name=".effect.ScraperCardActivity" />
     </application>
 
 </manifest>
