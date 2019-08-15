@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseSectionQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.SectionEntity;
+import com.z2wenfa.effectartist.effect.DynamicsBackgroundActivity;
 import com.z2wenfa.effectartist.effect.TelescopeActivity;
+import com.z2wenfa.effectartist.wiget.DynamicBakckgroudView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,10 +53,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        //动画
+        //特效
         effectEntities.add(new EffectContainerEntity(true, "特效"));
         effectEntities.add(new EffectContainerEntity(new Effect("望远镜效果", v -> {
             startActivity(TelescopeActivity.class);
+        })));
+
+        //动画
+        effectEntities.add(new EffectContainerEntity(true, "动画"));
+        effectEntities.add(new EffectContainerEntity(new Effect("动态背景", v -> {
+            startActivity(DynamicsBackgroundActivity.class);
         })));
     }
 

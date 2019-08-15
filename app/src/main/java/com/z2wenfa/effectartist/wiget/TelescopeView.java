@@ -13,6 +13,8 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.blankj.utilcode.util.ImageUtils;
+import com.blankj.utilcode.util.ScreenUtils;
 import com.z2wenfa.effectartist.R;
 
 /**
@@ -47,7 +49,7 @@ public class TelescopeView extends View {
         paint = new Paint();
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.beauty);
-
+        bitmap = ImageUtils.scale(bitmap, ScreenUtils.getScreenWidth(), ScreenUtils.getScreenHeight());
         bitmapShader = new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
         paint.setShader(bitmapShader);
     }
