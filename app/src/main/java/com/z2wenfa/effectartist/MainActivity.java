@@ -15,6 +15,7 @@ import com.chad.library.adapter.base.entity.SectionEntity;
 import com.z2wenfa.effectartist.effect.DynamicsBackgroundActivity;
 import com.z2wenfa.effectartist.effect.ScraperCardActivity;
 import com.z2wenfa.effectartist.effect.TelescopeActivity;
+import com.z2wenfa.effectartist.effect.WaterWaveActivity;
 import com.z2wenfa.effectartist.wiget.DynamicBakckgroudView;
 
 import java.util.ArrayList;
@@ -61,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
         })));
         effectEntities.add(new EffectContainerEntity(new Effect("刮刮卡效果", v -> {
             startActivity(ScraperCardActivity.class);
+        })));
+        effectEntities.add(new EffectContainerEntity(new Effect("波纹效果", v -> {
+            startActivity(WaterWaveActivity.class);
         })));
 
         //动画
